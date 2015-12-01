@@ -1,6 +1,7 @@
 #ifndef __FileSystem_v1__SoundFile__
 #define __FileSystem_v1__SoundFile__
 #include <iostream>
+#include <sstream>
 #include <iomanip>
 #include "File.h"
 using namespace std;
