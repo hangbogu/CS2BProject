@@ -11,6 +11,7 @@
 #include "ImageFile.h"
 #include "TextFile.h"
 #include "SoundFile.h"
+#include "SongFile.h"
 using namespace std;
 
 class FileProcessingSystem
