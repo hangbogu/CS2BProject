@@ -31,3 +31,8 @@ string TextFile::get_plain_text() const {
 char TextFile::get_type() const {
   return 'T';
 }
+
+void TextFile::Displace() const
+{
+   File::Display();
+}
