@@ -1,4 +1,6 @@
 # File system Project
+Presentation on Dec 2nd 18:30 - 19:30
+Final and Assignment 4 due Dec 9th 18:00 - 19:30
 
 ##### Getting derived class' type from base pointer
 Useful for type casting.
