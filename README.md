@@ -2,6 +2,7 @@
 
 | Remarks                | Date / time           |
 | ---------------------- | --------------------- |
+| Team meeting           | Dec 2nd 16:00 - 18:30 |
 | Presentation           | Dec 2nd 18:30 - 19:30 |
 | Final and Assignment 4 | Dec 9th 18:00 - 19:30 |
  
