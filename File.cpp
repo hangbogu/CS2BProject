@@ -37,11 +37,11 @@ bool File::operator== (const File& other_file) const{
 }
 
 void File::Display() const {
-   cout << "Name <" << name_ << "> "
-        << "Size <" << size_KB_ << "KB> "
-        << "Path <" << file_path_ << "> "
-        << "Format <" << file_format_ << "> "
-        << "ReadOnly <" << (read_only_ ? "Yes":"No")  << ">";
+   cout << setw(20) << left << name_
+        << setw(10) << right << size_KB_
+        << setw(5) << left << file_format_
+        << setw(5) << left<< (read_only_ ? "Yes":"No")  << ">"
+        << setw(50) << left << file_path_;
 }
 
 void File::set_name(string new_name){ //removed RenameFile in favor for mutator
