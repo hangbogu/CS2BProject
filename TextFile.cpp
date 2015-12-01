@@ -32,7 +32,7 @@ char TextFile::get_type() const {
   return 'T';
 }
 
-void TextFile::Displace() const
+void TextFile::Display() const
 {
    File::Display();
 }
