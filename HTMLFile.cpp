@@ -24,3 +24,8 @@ string HTMLFile::get_plain_text() const {
 char HTMLFile::get_type() const {
    return 'H';
 }
+
+void HTMLFile::Display() const
+{
+   File::Display();
+}
