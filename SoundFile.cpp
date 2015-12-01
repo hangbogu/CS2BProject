@@ -27,10 +27,12 @@ SoundFile* SoundFile::Trim(string end_time) const {
   
   //Placeholder for future implementation
     return NULL;
+    
 }
 
 SoundFile* SoundFile::Trim(string begin_time, string end_time) const{
 
   //Placeholder for future implementation
     return NULL;
+    
 }
