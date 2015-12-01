@@ -24,11 +24,11 @@ public:
     ~FileProcessingSystem(void);
     
     void BuildFileSystem (void);
-    void BrowseFiles (void);
-    File *SearchFile (string name);
+    void BrowseFiles (void) const;
+    File *SearchFile (string name) const;
     void DeleteFile (File* file);
     void DeleteFile (string file_name);
-    void OpenFile(string name);
+    void OpenFile(string name) const ;
     template<class T> void ShowAllFilesOfAKind (const T& type);
     void SortByName ( );  //TODO:
     void NumberOfFilesByKind ( ) const; 
