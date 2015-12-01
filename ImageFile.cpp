@@ -50,7 +50,15 @@ color_space_enum ImageFile::StringToColorEnum(string colorString) const {
 }
 
 void ImageFile::Display() const{
-    cout << "Image file info: " << endl;
     File::Display();
-    cout << "Bit depth: " << bit_depth_ << "\nResolution: " << resolution_[0] << "x" << resolution_[1] << "\nDimensions: " << dimensions_[0] << "x" << dimensions_[1] << "\nColor space: " << color_space_ << endl;
+    cout << setw(50) 
+         << "BD <" << bit_depth_ 
+         << "> R < " << resolution_[0] << "x" << resolution_[1] 
+         << "> Size <" << dimensions_[0] << "x" << dimensions_[1] 
+         << "> CS: <" << color_space_ << ">";
+}
+
+char ImageFile::get_type() const
+{
+   return 'I';
 }
