@@ -23,6 +23,12 @@ FileProcessingSystem::~FileProcessingSystem()
    file_map.clear();
 }
 
+/* METHOD TO DISPLACE USER MENU */
+void FileProcessingSystem::Menu() const
+{
+
+}
+
 /* METHOD TO PRINT FILE INFO TO SCREEN */
 void FileProcessingSystem::BrowseFiles() const
 {
@@ -257,11 +263,11 @@ void FileProcessingSystem::ShowAllFilesOfAKind(const T &type)
     }
 }
 
-void FileProcessingSystem::NumberOfFilesByKind() {
+void FileProcessingSystem::NumberOfFilesByKind() const {
     int html_files = 0, text_files = 0, image_files = 0, sound_file = 0, song_file = 0;
     
-    vector<File*>::iterator vItr;
-    map<string, vector<File*>>::iterator mItr = file_map.begin();
+    vector<File*>::const_iterator vItr;
+    map<string, vector<File*>>::const_iterator mItr = file_map.begin();
     while (mItr != file_map.end())
     {
         vItr = (mItr->second).begin();
