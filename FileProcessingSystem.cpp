@@ -201,14 +201,17 @@ void FileProcessingSystem::BuildFileSystem()
                new HTMLFile(file_name,file_size,file_format,file_path, read_only));
             break;
          case png: // handle image file
+            getline(fin, buffer,'|');
+            file_path = buffer;
+
             getline (fin, buffer, '|');
             image_bit_deepth = atol(buffer.c_str());
 
             getline (fin, buffer, '|');
-            istringstream(buffer,',') >> resolution[0] >> resolution[1];
+            istringstream(buffer) >> resolution[0] >> resolution[1];
 
             getline (fin, buffer, '|');
-            istringstream(buffer,',') >> demension[0] >> demension[1];
+            istringstream(buffer) >> demension[0] >> demension[1];
 
             getline (fin, buffer, '\n');
             color_space = buffer;
