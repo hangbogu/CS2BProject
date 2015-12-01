@@ -30,7 +30,8 @@ public:
     string get_num_of_channels() const;
     int get_sampling_freq() const;
     
-    
+    virtual void Display() const;
+    virtual char get_type() const;
     virtual void Open() const;
     SoundFile * Trim(string end_time) const;
     SoundFile * Trim(string begin_time, string end_time) const;
