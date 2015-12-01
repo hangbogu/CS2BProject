@@ -2,4 +2,4 @@ Tom|C++ Lec 12 Notes|8|txt|0|C:\Users\Admin\Desktop\
 Tom|main page|210|html|0|C:\Users\Admin\Desktop\
 Sean|Assignment_0|8|txt|0|C:\Users\Sheila Xu\Desktop\C++\
 Sean|my song|3020|mp3|0|C:\Users\Admin\Desktop\|120|32|2|128
-Sean|my picture|230|png|0|C:\Users\Admin\Desktop\|28|300,300|1280,960|1
+Sean|my picture|230|png|0|C:\Users\Admin\Desktop\|28|300 300|1280 960|1
