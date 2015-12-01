@@ -24,7 +24,7 @@ FileProcessingSystem::~FileProcessingSystem()
 }
 
 /* METHOD TO PRINT FILE INFO TO SCREEN */
-void FileProcessingSystem::BrowseFiles()
+void FileProcessingSystem::BrowseFiles() const
 {
    if (file_map.empty())
    {
@@ -33,8 +33,8 @@ void FileProcessingSystem::BrowseFiles()
    }
 
    File* p_file;
-   vector<File*>::iterator vItr;
-   map<string, vector<File*>>::iterator mItr = file_map.begin();
+   vector<File*>::const_iterator vItr;
+   map<string, vector<File*>>::const_iterator mItr = file_map.begin();
    while (mItr != file_map.end())
    {
       vItr = (mItr->second).begin();
@@ -49,11 +49,11 @@ void FileProcessingSystem::BrowseFiles()
 }
 
 /* METHOD TO SEARCH FILE BY ITS NAME */
-File* FileProcessingSystem::SearchFile(const string name)
+File* FileProcessingSystem::SearchFile(const string name) const
 {
    File* p_file;
-   vector<File*>::iterator vItr;
-   map<string, vector<File*>>::iterator mItr = file_map.begin();
+   vector<File*>::const_iterator vItr;
+   map<string, vector<File*>>::const_iterator mItr = file_map.begin();
    while (mItr != file_map.end())
    {
       vItr = (mItr->second).begin();
@@ -96,11 +96,11 @@ void FileProcessingSystem::DeleteFile (string file_name)
 }
 
 /* METHOD TO OPEN FILE */
-void FileProcessingSystem::OpenFile(string name)
+void FileProcessingSystem::OpenFile(string name) const
 {
    File* p_file;
-   vector<File*>::iterator vItr;
-   map<string, vector<File*>>::iterator mItr = file_map.begin();
+   vector<File*>::const_iterator vItr;
+   map<string, vector<File*>>::const_iterator mItr = file_map.begin();
    while (mItr != file_map.end())
    {
       vItr = (mItr->second).begin();
