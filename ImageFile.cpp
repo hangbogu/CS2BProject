@@ -2,7 +2,14 @@
 
 ImageFile::ImageFile() : File(), bit_depth_(8), resolution_(0), dimensions_(0), color_space_(Gray) {}
 
-ImageFile::ImageFile(string name, int size_KB, FileFormat file_format, string file_path, bool read_only, int bit_depth, int resolution[2], int dimensions[2], string color_space) : File(name, size_KB, file_format, file_path, read_only), bit_depth_(bit_depth), resolution_(resolution), dimensions_(dimensions), color_space_(StringToColorEnum(color_space)){}
+ImageFile::ImageFile(string name, int size_KB, FileFormat file_format, string file_path, bool read_only, int bit_depth, int resolution[2], int dimensions[2], string color_space) : 
+   File(name, size_KB, file_format, file_path, read_only), bit_depth_(bit_depth), color_space_(StringToColorEnum(color_space))
+{
+   resolution_[0] = *resolution;
+   resolution_[1] = *++resolution;
+   dimensions_[0] = *dimensions;
+   dimensions_[1] = *++dimensions;
+}
 
 ImageFile::~ImageFile(){
     File::~File();
