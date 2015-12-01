@@ -1,6 +1,7 @@
 #ifndef __FileSystem_v1__ImageFile__
 #define __FileSystem_v1__ImageFile__
 #include <iostream>
+#include <iomanip>
 #include <vector>
 #include <map>
 #include "File.h"
@@ -35,7 +36,7 @@ public:
     int*  get_dimensions() const;
     color_space_enum get_color_space() const;
     virtual void Display() const;
-    
+    virtual char get_type() const;
     color_space_enum StringToColorEnum(string) const;
 };
 #endif
