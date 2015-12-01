@@ -48,6 +48,7 @@ void FileProcessingSystem::BrowseFiles() const
       {
          p_file = *vItr;
          p_file->Display();
+         cout << endl;
          ++vItr;
       }
       ++mItr;
