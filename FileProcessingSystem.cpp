@@ -55,6 +55,7 @@ void FileProcessingSystem::BrowseFiles() const
       while (vItr != (mItr->second).end())
       {
          p_file = *vItr;
+         cout << setw(10) << left << mItr->first; // print owner name
          p_file->Display();
          cout << endl;
          ++vItr;
