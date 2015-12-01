@@ -1,9 +1,10 @@
 #include "SoundFile.h"
 
-SoundFile::SoundFile() : File(), duration_(0), bit_depth_(0), num_of_channels_(""), sampling_freq_HZ_(0) {}
+SoundFile::SoundFile() : 
+  File(), duration_(0), bit_depth_(0), num_of_channels_(""), sampling_freq_HZ_(0) {}
 
 SoundFile::SoundFile(string name, int size_KB, string file_path, bool read_only, FileFormat file_format,
-                      int duration, int bit_depth, string num_of_channels, int sampling_freq): File(name, size_KB, file_format, file_path, read_only), duration_(0), bit_depth_(0), num_of_channels_(""), sampling_freq_HZ_(0){}
+  int duration, int bit_depth, string num_of_channels, int sampling_freq): File(name, size_KB, file_format, file_path, read_only), duration_(0), bit_depth_(0), num_of_channels_(""), sampling_freq_HZ_(0){}
 
 SoundFile::~SoundFile() {}
 
