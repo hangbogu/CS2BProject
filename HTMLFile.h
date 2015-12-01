@@ -14,9 +14,8 @@ public:
 
     virtual void Open() const;
     virtual Document* MergeWith (const Document*) const;
-
     virtual char get_type() const;
-
     virtual string get_plain_text() const;
+    virtual void Display() const;
 };
 #endif
