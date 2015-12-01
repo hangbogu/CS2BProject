@@ -41,10 +41,10 @@ SoundFile* SoundFile::Trim(string begin_time, string end_time) const{
 void SoundFile::Display() const{
     File::Display();
     ostringstream os;
-    os  << "Duration <" + duration_ 
-         << "> BD <" + bit_depth_
-         << "> C <" + num_of_channels_
-         << "> SF: <" + sampling_freq_HZ_ << ">";
+    os  << "Duration <" << duration_ 
+         << "> BitDepth <" << bit_depth_
+         << "> Channel <" << num_of_channels_
+         << "> SampleFrequency <" << sampling_freq_HZ_ << ">";
     cout << setw(50) << os.str();
 }
 
