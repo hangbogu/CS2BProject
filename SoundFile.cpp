@@ -36,3 +36,17 @@ SoundFile* SoundFile::Trim(string begin_time, string end_time) const{
     return NULL;
     
 }
+
+void SoundFile::Display() const{
+    File::Display();
+    cout << setw(50) 
+         << "Duration <" << duration_ 
+         << "> BD < " << bit_depth_
+         << "> C <" << num_of_channels_
+         << "> SF: <" << sampling_freq_HZ_ << ">";
+}
+
+char SoundFile::get_type() const
+{
+   return 'S';
+}
