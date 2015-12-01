@@ -241,3 +241,63 @@ FileFormat FileProcessingSystem::convertStrToFormat(const string format) const
    else 
       return FileFormat::unknown;
 }
+
+template <class T>
+void FileProcessingSystem::ShowAllFilesOfAKind(const T &type)
+{
+    char file_kind = static_cast<const File&>(type).get_type();
+    
+    map<string, vector<File*>>::iterator m_iter = file_map.begin();
+    while (m_iter != file_map.end()) {
+        vector<File*>::iterator v_iter = m_iter->second.begin();
+        while (v_iter != m_iter->second.end()) {
+            if (file_kind == type.get_type())
+                v_iter->Display();
+        }
+    }
+}
+
+void FileProcessingSystem::NumberOfFilesByKind() {
+    int html_files = 0, text_files = 0, image_files = 0, sound_file = 0, song_file = 0;
+    
+    vector<File*>::iterator vItr;
+    map<string, vector<File*>>::iterator mItr = file_map.begin();
+    while (mItr != file_map.end())
+    {
+        vItr = (mItr->second).begin();
+        while (vItr != (mItr->second).end())
+        {
+            char type = (**vItr).get_type();
+            switch (type) {
+                case 'T':
+                    text_files++;
+                    break;
+                    
+                case 'H':
+                    html_files++;
+                    break;
+                
+                case 'I':
+                    image_files++;
+                    break;
+                    
+                case 'S':
+                    sound_file++;
+                    break;
+                
+                case 's':
+                    song_file++;
+                    break;
+                    
+                default:
+                    break;
+            }
+        }
+    }
+    cout << "Files by type: " << endl;
+    cout << "Text files: " << text_files << endl;
+    cout << "HTML files: " << html_files << endl;
+    cout << "Image files: " << image_files << endl;
+    cout << "Sound files: " << text_files << endl;
+    cout << "Song files: " << song_file << endl << endl;
+}
