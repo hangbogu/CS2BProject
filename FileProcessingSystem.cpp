@@ -26,7 +26,15 @@ FileProcessingSystem::~FileProcessingSystem()
 /* METHOD TO DISPLACE USER MENU */
 void FileProcessingSystem::Menu() const
 {
-
+   cout << endl
+        << "            XYZ Inc." << endl
+        << " SHARED FILE MANAGEMENT SYSTEM" << endl
+        << " -----------------------------" << endl
+        << " 1. Browse file" << endl
+        << " 2. Search a file by name" << endl 
+        << " 3. Delete a file" << endl 
+        << " 4. Open a file" << endl
+        << " 5. Quit" << endl << endl;
 }
 
 /* METHOD TO PRINT FILE INFO TO SCREEN */
