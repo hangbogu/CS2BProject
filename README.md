@@ -1,6 +1,6 @@
 # File system Project
 
-##### Getting class type from base pointer
+##### Getting derived class' type from base pointer
 Useful for type casting.
 ```c++
 File *p_f = ...;
