@@ -30,7 +30,6 @@ public:
     void Open() const;
     bool operator== (const File&) const;
     virtual void Display() const = 0;
-
     virtual char get_type() const = 0;
 
     void set_name(string);
