@@ -31,6 +31,6 @@ public:
     void OpenFile(string name);
     template<class T> void ShowAllFilesOfAKind (const T& type);
     void SortByName ( );  //TODO:
-    void NumberOfFilesByKind ( ) const; //TODO:
+    void NumberOfFilesByKind ( ) const; 
 };
 #endif
