@@ -18,7 +18,7 @@ public:
     TextFile& operator<< (const string &text);
     virtual Document* MergeWith (const Document*) const;
     virtual string get_plain_text() const;
-
+    virtual void Displace() const;
     virtual char get_type() const;
 };
 #endif
