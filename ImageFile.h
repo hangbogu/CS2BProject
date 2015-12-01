@@ -2,6 +2,7 @@
 #define __FileSystem_v1__ImageFile__
 #include <iostream>
 #include <iomanip>
+#include <sstream>
 #include <vector>
 #include <map>
 #include "File.h"
