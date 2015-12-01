@@ -29,7 +29,7 @@ public:
     void DeleteFile (File* file);
     void DeleteFile (string file_name);
     void OpenFile(string name);
-    template<class T> void SortByKind (T& type); //TODO:
+    template<class T> void ShowAllFilesOfAKind (const T& type);
     void SortByName ( );  //TODO:
     void NumberOfFilesByKind ( ) const; //TODO:
 };
